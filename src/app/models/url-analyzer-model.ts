@@ -6,6 +6,8 @@ export interface UrlAnalyzerModel {
   externalLinks: number
   inaccessibleLinks: number
   loginFormDetected: boolean
+  timeTakenToAnalyze: number
+  url: string
 }
 
 export interface Headings {
