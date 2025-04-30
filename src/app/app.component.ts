@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { UrlAnalyzerService } from './services/url-analyzer.service';
+import {Component, OnInit} from '@angular/core';
+import {UrlAnalyzerService} from './services/url-analyzer.service';
+import {FormControl, Validators} from '@angular/forms';
+import {UrlAnalyzerModel} from './models/url-analyzer-model';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +12,31 @@ import { UrlAnalyzerService } from './services/url-analyzer.service';
 export class AppComponent implements OnInit {
 
 
-  constructor(private urlAnalyzerService:UrlAnalyzerService){
+  urlInputFormControl = new FormControl('', [Validators.required]);
+
+  data: UrlAnalyzerModel | null = null;
+
+  constructor(private urlAnalyzerService: UrlAnalyzerService) {
 
   }
 
   ngOnInit(): void {
-    this.urlAnalyzerService.getStats('https://google.com').subscribe({
-      next:(res)=>{
-        console.log(res)
+
+  }
+
+
+  getStats() {
+
+    if (this.urlInputFormControl.invalid) {
+      return;
+    }
+
+    const url = this.urlInputFormControl.value!;
+
+    this.urlAnalyzerService.getStats(url).subscribe({
+      next: (res) => {
+        this.data = res;
       }
     })
   }
-  title = 'url-analyzer-client';
 }

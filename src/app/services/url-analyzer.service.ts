@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import {UrlAnalyzerModel} from '../models/url-analyzer-model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class UrlAnalyzerService {
 
   constructor(private http: HttpClient) { }
 
-  getStats(url: string): Observable<any> {
-    return this.http.get(`${this.API_URL}/url-analyzer?url=${url}`)
+  getStats(url: string): Observable<UrlAnalyzerModel> {
+    return this.http.get<UrlAnalyzerModel>(`${this.API_URL}/url-analyzer?url=${url}`)
   }
 }

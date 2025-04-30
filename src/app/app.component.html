@@ -1,4 +1,22 @@
+<div class="container">
+  <div>
+    <input [formControl]="urlInputFormControl"
+           class="min-w-80">
+  </div>
 
-<h1 class="text-3xl font-bold underline">
-  {{title}}
-</h1>
+  <div>
+    <button (click)="getStats()">
+      Get Stats
+    </button>
+  </div>
+</div>
+
+
+@if (data) {
+  <div>
+    <h2>Stats</h2>
+    <p>PAGE TITLE: {{ data.pageTitle }}</p>
+    <p>Title: {{ data.htmlVersion }}</p>
+    <p>Word Count: {{ data.headings.h1 }}</p>
+  </div>
+}
