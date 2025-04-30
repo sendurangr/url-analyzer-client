@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
 
   urlInputFormControl = new FormControl('', [Validators.required]);
-
   data: UrlAnalyzerModel | null = null;
+  isLoading = false;
 
   constructor(private urlAnalyzerService: UrlAnalyzerService) {
 
@@ -27,15 +27,24 @@ export class AppComponent implements OnInit {
 
   getStats() {
 
+    this.data = null;
+
     if (this.urlInputFormControl.invalid) {
       return;
     }
+
+    this.isLoading = true;
 
     const url = this.urlInputFormControl.value!;
 
     this.urlAnalyzerService.getStats(url).subscribe({
       next: (res) => {
         this.data = res;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.error(err);
+        this.isLoading = false;
       }
     })
   }
