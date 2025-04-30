@@ -12,7 +12,6 @@
 
 
   <div class="mx-auto mt-10 max-w-2xl sm:mt-12">
-
     <div class="flex gap-2">
       <div class="grow-1">
         <input class="w-full" type="text" pInputText [readOnly]="isLoading" [formControl]="urlInputFormControl"/>
@@ -23,6 +22,15 @@
 
     </div>
 
+
+    @if(errorMessage){
+      <div class="mt-5">
+        <p-message severity="error" text="{{ errorMessage }}"
+                   icon="pi pi-send" styleClass="w-full"
+                   (onClose)="onCloseErrorMessage()"
+                   [closable]="true" />
+      </div>
+    }
 
 
     @if (data) {
@@ -145,10 +153,7 @@
             </div>
           </div>
         </p-card>
-
       </div>
-
-
     }
 
   </div>

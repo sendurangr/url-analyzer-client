@@ -12,6 +12,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputText} from 'primeng/inputtext';
 import {Card} from "primeng/card";
 import { definePreset } from '@primeng/themes';
+import { MessageModule } from 'primeng/message';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { definePreset } from '@primeng/themes';
     ButtonModule,
     InputText,
     Card,
-
+    MessageModule
   ],
   providers: [
     provideHttpClient(withFetch()),

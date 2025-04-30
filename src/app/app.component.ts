@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   urlInputFormControl = new FormControl('', [Validators.required]);
   data: UrlAnalyzerModel | null = null;
   isLoading = false;
+  errorMessage = '';
 
   constructor(private urlAnalyzerService: UrlAnalyzerService) {
 
@@ -45,7 +46,22 @@ export class AppComponent implements OnInit {
       error: (err) => {
         console.error(err);
         this.isLoading = false;
+        debugger;
+
+        if (err.message) {
+          this.errorMessage = err.message;
+        }
+        if (err.error && err.error.message) {
+          this.errorMessage = err.error.message;
+        }
+
       }
     })
+  }
+
+  onCloseErrorMessage() {
+    this.errorMessage = ''
+    this.data = null;
+    this.urlInputFormControl.reset();
   }
 }
