@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UrlAnalyzerService } from './services/url-analyzer.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,19 @@ import { Component } from '@angular/core';
   standalone: false,
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+
+  constructor(private urlAnalyzerService:UrlAnalyzerService){
+
+  }
+
+  ngOnInit(): void {
+    this.urlAnalyzerService.getStats('https://google.com').subscribe({
+      next:(res)=>{
+        console.log(res)
+      }
+    })
+  }
   title = 'url-analyzer-client';
 }
