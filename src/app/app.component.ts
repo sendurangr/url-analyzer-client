@@ -46,7 +46,6 @@ export class AppComponent implements OnInit {
       error: (err) => {
         console.error(err);
         this.isLoading = false;
-        debugger;
 
         if (err.message) {
           this.errorMessage = err.message;
