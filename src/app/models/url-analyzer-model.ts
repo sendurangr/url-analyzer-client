@@ -4,7 +4,8 @@ export interface UrlAnalyzerModel {
   headings: Headings
   internalLinks: number
   externalLinks: number
-  inaccessibleLinks: number
+  inaccessibleInternalLinks: number
+  inaccessibleExternalLinks: number
   loginFormDetected: boolean
   timeTakenToAnalyze: number
   url: string
@@ -17,6 +18,4 @@ export interface Headings {
   h4: number
   h5: number
   h6: number
-  h7: number
-  h8: number
 }
