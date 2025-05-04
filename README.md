@@ -9,6 +9,7 @@
   * [🪐 Deployment](#-deployment)
     * [✅ CI/CD](#-cicd)
   * [🔅 Linked Repositories](#-linked-repositories)
+  * [☃️ <br>Find Extended / Full Documentation from <br>https://github.com/sendurangr/url-analyzer-api <br> (Backend Readme File)](#-brfind-extended--full-documentation-from-brhttpsgithubcomsendurangrurl-analyzer-api-br-backend-readme-file)
 <!-- TOC -->
 
 ## 💻 Local Setup Guide
