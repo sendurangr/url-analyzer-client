@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   getStats() {
 
     this.data = null;
+    this.errorMessage = ''
 
     if (this.urlInputFormControl.invalid) {
       return;
