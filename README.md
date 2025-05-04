@@ -42,14 +42,14 @@
 
 ## 🤙 User Interface
 
-![ui](./docs/assets/frontend-ui.png)
+![ui](./docs/assets/demo2.gif)
 
 ## 🪐 Deployment
 
-| Services | Endpoints                                                          |
-|----------|--------------------------------------------------------------------|
-| Frontend | https://d2tiqwdij4sc1n.cloudfront.net                              |
-| Backend  | https://8pmmtnd3yw.ap-south-1.awsapprunner.com/api/v1/health-check |
+| Services | Endpoints                                             |
+|----------|-------------------------------------------------------|
+| Frontend | https://d2tiqwdij4sc1n.cloudfront.net                 |
+| Backend  | https://8pmmtnd3yw.ap-south-1.awsapprunner.com/health |
 
 ![Infrastructure Diagram](./docs/assets/diagram.svg)
 
@@ -67,3 +67,6 @@
 | Backend - Golang                | https://github.com/sendurangr/url-analyzer-api    (Current)                                     |
 | Deployment Infrastructure - AWS | https://github.com/sendurangr/url-analyzer-infrastructure <br> (Provisioning through Terraform) |
 | Frontend - Angular              | https://github.com/sendurangr/url-analyzer-client                                               |
+
+
+## ☃️ <br>Find Extended / Full Documentation from <br>https://github.com/sendurangr/url-analyzer-api <br> (Backend Readme File)
