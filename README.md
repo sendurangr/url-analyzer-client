@@ -65,9 +65,9 @@
 
 | Services                        | Repositories                                                                                    |
 |---------------------------------|-------------------------------------------------------------------------------------------------|
-| Backend - Golang                | https://github.com/sendurangr/url-analyzer-api    (Current)                                     |
+| Backend - Golang                | https://github.com/sendurangr/url-analyzer-api                                         |
 | Deployment Infrastructure - AWS | https://github.com/sendurangr/url-analyzer-infrastructure <br> (Provisioning through Terraform) |
-| Frontend - Angular              | https://github.com/sendurangr/url-analyzer-client                                               |
+| Frontend - Angular              | https://github.com/sendurangr/url-analyzer-client (Current)                                            |
 
 
 ## ☃️ <br>Find Extended / Full Documentation from <br>https://github.com/sendurangr/url-analyzer-api <br> (Backend Readme File)
